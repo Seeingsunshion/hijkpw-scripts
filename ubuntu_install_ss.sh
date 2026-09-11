@@ -200,7 +200,8 @@ normalizeVersion() {
 
 installNewVer() {
     new_ver=$1
-    if ! wget "${V6_PROXY}https://github.com/shadowsocks/shadowsocks-libev/releases/download/v${new_ver}/shadowsocks-libev-${new_ver}.tar.gz" -O shadowsocks-libev.tar.gz; then
+    # if ! wget "${V6_PROXY}https://github.com/shadowsocks/shadowsocks-libev/releases/download/v${new_ver}/shadowsocks-libev-3.3.6.tar.gz" -O shadowsocks-libev.tar.gz; then
+    if ! wget "${V6_PROXY}https://github.com/shadowsocks/shadowsocks-libev/releases/download/v3.3.6/shadowsocks-libev-${new_ver}.tar.gz" -O shadowsocks-libev.tar.gz; then
         colorEcho $RED " 下载安装文件失败！"
         exit 1
     fi
